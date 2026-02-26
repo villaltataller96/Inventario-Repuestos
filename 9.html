@@ -246,6 +246,20 @@ notas:""
 })
 
 save()
+
+if (items.length === 0) {
+  items.push({
+    id: Date.now(),
+    nombre: "Pantalla",
+    modelos: "iPhone X",
+    ubicacion: "Almacén 1",
+    precio_costo: 50,
+    precio_venta: 80,
+    stock_actual: 5,
+    notas: ""
+  });
+}
+
 renderTable()
 
 document.querySelectorAll("input[type='checkbox']").forEach(c=>c.checked=false)
